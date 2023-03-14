@@ -5,7 +5,16 @@
 # URL: https://www.rpubs.com/rcleoni/correlacao
 #
 
-# carregar o pacote
+#limpa o terminal
+cls <- function() {       
+  require(rcom)       
+  wsh <- comCreateObject("Wscript.Shell")       
+  comInvoke(wsh, "SendKeys", "\014")       
+  invisible(wsh)
+}
+cls()
+
+#carregar o pacote corrplot
 library(corrplot)
 
 #carrega o arquivo
